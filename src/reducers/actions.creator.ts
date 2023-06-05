@@ -5,11 +5,11 @@ type Keys = keyof typeof actionTypes;
 
 export type TelephoneAction = {
   type: (typeof actionTypes)[Keys];
-  payload: Telephone[];
+  payload: Telephone;
 };
 
 export function updateDisplayTelephoneAction(
-  payload: Telephone[]
+  payload: Telephone
 ): TelephoneAction {
   return {
     type: actionTypes.updateDisplay,
@@ -17,14 +17,14 @@ export function updateDisplayTelephoneAction(
   };
 }
 
-export function deteleDisplayAction(payload: Telephone[]): TelephoneAction {
+export function deteleDisplayAction(payload: Telephone): TelephoneAction {
   return {
     type: actionTypes.deleteDisplay,
     payload,
   };
 }
 
-export function updateCallingAction(payload: Telephone[]): TelephoneAction {
+export function updateCallingAction(payload: Telephone): TelephoneAction {
   return {
     type: actionTypes.updateCalling,
     payload,
