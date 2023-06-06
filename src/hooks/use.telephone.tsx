@@ -11,4 +11,5 @@ export function UseTelephone() {
   };
 
   const [telephoneState, dispatch] = useReducer(telephoneReducer, initialState);
+  dispatch;
 }
